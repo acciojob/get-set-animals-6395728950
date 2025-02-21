@@ -1,5 +1,6 @@
 //complete this code
 class Animal {
+	private:
     constructor(private _species: string) {}
 
     get species(): string {

@@ -2,13 +2,12 @@
  
 	 
 
-// Dog subclass extending Animal
 class Animal {
     private _species: string;
     
     constructor(species: string) {
-		this._species = species;
-	}
+        this._species = species;
+    }
 
     get species(): string {
         return this._species;
@@ -21,23 +20,31 @@ class Animal {
 
 // Cat subclass extending Animal
 class Cat extends Animal {
-    constructor(species: string) {
-        super(species);
+    constructor() {
+        super("Cat"); // Automatically set species to "Cat"
     }
 
     purr(): void {
         console.log("purr");
     }
+
+    makeSound(): void {
+        this.purr(); // Override to use the specific sound
+    }
 }
 
 // Dog subclass extending Animal
 class Dog extends Animal {
-    constructor(species: string) {
-        super(species);
+    constructor() {
+        super("Dog"); // Automatically set species to "Dog"
     }
 
     bark(): void {
         console.log("woof");
+    }
+
+    makeSound(): void {
+        this.bark(); // Override to use the specific sound
     }
 }
 

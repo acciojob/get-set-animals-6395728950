@@ -4,8 +4,10 @@
 
 // Dog subclass extending Animal
 class Animal {
-    constructor(private _species: string) {
-		this.species = species;
+    private _species: string;
+    
+    constructor(species: string) {
+		this._species = species;
 	}
 
     get species(): string {
